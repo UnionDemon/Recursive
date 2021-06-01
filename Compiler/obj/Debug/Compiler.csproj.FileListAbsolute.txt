@@ -1,0 +1,98 @@
+C:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.exe.config
+C:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.exe
+C:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.pdb
+C:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+C:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.Form1.resources
+C:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+C:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+C:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
+C:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.exe
+C:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.pdb
+E:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.exe.config
+E:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.exe
+E:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.pdb
+E:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+E:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.Form1.resources
+E:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+E:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+E:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.exe
+E:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.pdb
+H:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.exe.config
+H:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.exe
+H:\VS Labs\Compiler\Compiler\bin\Debug\Compiler.pdb
+H:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+H:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.Form1.resources
+H:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+H:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+H:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
+H:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.exe
+H:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.pdb
+E:\VS Labs\Compiler\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
+G:\VS Labs\Fortran constants\Compiler\bin\Debug\Compiler.exe.config
+G:\VS Labs\Fortran constants\Compiler\bin\Debug\Compiler.exe
+G:\VS Labs\Fortran constants\Compiler\bin\Debug\Compiler.pdb
+G:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+G:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.Form1.resources
+G:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+G:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+G:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
+G:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.exe
+G:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.pdb
+F:\VS Labs\Fortran constants\Compiler\bin\Debug\Compiler.exe.config
+F:\VS Labs\Fortran constants\Compiler\bin\Debug\Compiler.exe
+F:\VS Labs\Fortran constants\Compiler\bin\Debug\Compiler.pdb
+F:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+F:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.Form1.resources
+F:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+F:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+F:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
+F:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.exe
+F:\VS Labs\Fortran constants\Compiler\obj\Debug\Compiler.pdb
+C:\Users\аня\Desktop\Fortran constants\Compiler\bin\Debug\Compiler.exe.config
+C:\Users\аня\Desktop\Fortran constants\Compiler\bin\Debug\Compiler.exe
+C:\Users\аня\Desktop\Fortran constants\Compiler\bin\Debug\Compiler.pdb
+C:\Users\аня\Desktop\Fortran constants\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+C:\Users\аня\Desktop\Fortran constants\Compiler\obj\Debug\Compiler.Form1.resources
+C:\Users\аня\Desktop\Fortran constants\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+C:\Users\аня\Desktop\Fortran constants\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+C:\Users\аня\Desktop\Fortran constants\Compiler\obj\Debug\Compiler.exe
+C:\Users\аня\Desktop\Fortran constants\Compiler\obj\Debug\Compiler.pdb
+E:\Fortran constants\Compiler\bin\Debug\Compiler.exe.config
+E:\Fortran constants\Compiler\bin\Debug\Compiler.exe
+E:\Fortran constants\Compiler\bin\Debug\Compiler.pdb
+E:\Fortran constants\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+E:\Fortran constants\Compiler\obj\Debug\Compiler.Form1.resources
+E:\Fortran constants\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+E:\Fortran constants\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+E:\Fortran constants\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
+E:\Fortran constants\Compiler\obj\Debug\Compiler.exe
+E:\Fortran constants\Compiler\obj\Debug\Compiler.pdb
+D:\NSTU\Lab 6\Compiler\bin\Debug\Compiler.exe.config
+D:\NSTU\Lab 6\Compiler\bin\Debug\Compiler.exe
+D:\NSTU\Lab 6\Compiler\bin\Debug\Compiler.pdb
+D:\NSTU\Lab 6\Compiler\obj\Debug\Compiler.csproj.AssemblyReference.cache
+D:\NSTU\Lab 6\Compiler\obj\Debug\Compiler.Form1.resources
+D:\NSTU\Lab 6\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+D:\NSTU\Lab 6\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+D:\NSTU\Lab 6\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
+D:\NSTU\Lab 6\Compiler\obj\Debug\Compiler.exe
+D:\NSTU\Lab 6\Compiler\obj\Debug\Compiler.pdb
+C:\Users\artem\Desktop\Lab 6\Compiler\bin\Debug\Compiler.exe.config
+C:\Users\artem\Desktop\Lab 6\Compiler\bin\Debug\Compiler.exe
+C:\Users\artem\Desktop\Lab 6\Compiler\bin\Debug\Compiler.pdb
+C:\Users\artem\Desktop\Lab 6\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+C:\Users\artem\Desktop\Lab 6\Compiler\obj\Debug\Compiler.Form1.resources
+C:\Users\artem\Desktop\Lab 6\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+C:\Users\artem\Desktop\Lab 6\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+C:\Users\artem\Desktop\Lab 6\Compiler\obj\Debug\Compiler.csproj.CoreCompileInputs.cache
+C:\Users\artem\Desktop\Lab 6\Compiler\obj\Debug\Compiler.exe
+C:\Users\artem\Desktop\Lab 6\Compiler\obj\Debug\Compiler.pdb
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\bin\Debug\Compiler.exe.config
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\bin\Debug\Compiler.exe
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\bin\Debug\Compiler.pdb
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\obj\Debug\Compiler.csprojAssemblyReference.cache
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\obj\Debug\Compiler.Form1.resources
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\obj\Debug\Compiler.Properties.Resources.resources
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\obj\Debug\Compiler.csproj.GenerateResource.cache
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\obj\Debug\Compiler.exe
+C:\Users\Егор А\Downloads\Lab_6\Lab 6\Compiler\obj\Debug\Compiler.pdb

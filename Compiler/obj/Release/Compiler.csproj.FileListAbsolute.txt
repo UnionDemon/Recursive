@@ -1,0 +1,10 @@
+H:\VS Labs\Compiler\Compiler\bin\Release\Compiler.exe.config
+H:\VS Labs\Compiler\Compiler\bin\Release\Compiler.exe
+H:\VS Labs\Compiler\Compiler\bin\Release\Compiler.pdb
+H:\VS Labs\Compiler\Compiler\obj\Release\Compiler.csprojAssemblyReference.cache
+H:\VS Labs\Compiler\Compiler\obj\Release\Compiler.Form1.resources
+H:\VS Labs\Compiler\Compiler\obj\Release\Compiler.Properties.Resources.resources
+H:\VS Labs\Compiler\Compiler\obj\Release\Compiler.csproj.GenerateResource.cache
+H:\VS Labs\Compiler\Compiler\obj\Release\Compiler.csproj.CoreCompileInputs.cache
+H:\VS Labs\Compiler\Compiler\obj\Release\Compiler.exe
+H:\VS Labs\Compiler\Compiler\obj\Release\Compiler.pdb

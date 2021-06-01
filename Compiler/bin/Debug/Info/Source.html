@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Листинг программы</title>
+</head>
+<body>
+	<h1>Листинг программы</h1><br>
+    <pre>FortranConstantsFinder.cs
+    using System.Collections.Generic;
+    
+    namespace Compiler
+    {
+        internal class FortranConstantsFinder
+        {
+            public struct ErrorInText
+            {
+                public ErrorInText(int position, int length)
+                {
+                    this.position = position;
+                    this.length = length;
+                }
+                public int position, length;
+            }
+            public struct CheckResult
+            {
+                public List<ErrorInText> errors;
+                public string constantName, constantValue;
+                public bool correct;
+                public CheckResult(string constantName, string constantValue)
+                {
+                    errors = new List<ErrorInText>();
+                    this.constantName = constantName;
+                    this.constantValue = constantValue;
+                    correct = true;
+                }
+            }
+    
+            private static int state;
+    
+            private static bool Isw(char symbol)
+            {
+                if ((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z') || (symbol >= '0' && symbol <= '9'))
+                    return true;
+                else
+                    return false;
+            }
+    
+            private static bool IsLetter(char symbol)
+            {
+                if ((symbol >= 'a' && symbol <= 'z') || (symbol >= 'A' && symbol <= 'Z'))
+                    return true;
+                else
+                    return false;
+            }
+    
+            private static bool IsDigit(char symbol)
+            {
+                if ((symbol >= '0' && symbol <= '9'))
+                    return true;
+                else
+                    return false;
+            }
+            private static void AddError(int pos, List<ErrorInText> errors)
+            {
+                if (errors.Count == 0)
+                {
+                    errors.Add(new ErrorInText(pos, 1));
+                    return;
+                }
+                if (errors[errors.Count - 1].position + errors[errors.Count - 1].length == pos)
+                {
+                    errors[errors.Count - 1] = new ErrorInText(errors[errors.Count - 1].position, errors[errors.Count - 1].length + 1);
+                }
+                else 
+                {
+                    errors.Add(new ErrorInText(pos, 1));
+                }
+            }
+    
+            public static CheckResult CheckString(string input)
+            {
+                CheckResult checkResult = new CheckResult("", "");
+                state = 0;
+                for (int i = 0; i < input.Length; i++)
+                {
+                    switch (state)
+                    {
+                        case 0: { if (input[i] == ' ') state = 0; else if (input[i] == 'r') state = 1; else { AddError(i, checkResult.errors); } break; }
+                        case 1: { if (input[i] == 'e') state = 2; else { AddError(i, checkResult.errors); } break; }
+                        case 2: { if (input[i] == 'a') state = 3; else { AddError(i, checkResult.errors); } break; }
+                        case 3: { if (input[i] == 'l') state = 4; else { AddError(i, checkResult.errors); } break; }
+                        case 4: { if (input[i] == ' ') state = 4; else if (input[i] == ',') state = 5; else { AddError(i, checkResult.errors); } break; }
+                        case 5: { if (input[i] == ' ') state = 5; else if (input[i] == 'p') state = 6; else { AddError(i, checkResult.errors); } break; }
+                        case 6: { if (input[i] == 'a') state = 7; else { AddError(i, checkResult.errors); } break; }
+                        case 7: { if (input[i] == 'r') state = 8; else { AddError(i, checkResult.errors); } break; }
+                        case 8: { if (input[i] == 'a') state = 9; else { AddError(i, checkResult.errors); } break; }
+                        case 9: { if (input[i] == 'm') state = 10; else { AddError(i, checkResult.errors); } break; }
+                        case 10: { if (input[i] == 'e') state = 11; else { AddError(i, checkResult.errors); } break; }
+                        case 11: { if (input[i] == 't') state = 12; else { AddError(i, checkResult.errors); } break; }
+                        case 12: { if (input[i] == 'e') state = 13; else { AddError(i, checkResult.errors); } break; }
+                        case 13: { if (input[i] == 'r') state = 14; else { AddError(i, checkResult.errors); } break; }
+                        case 14: { if (input[i] == ' ') state = 14; else if (input[i] == ':') state = 15; else { AddError(i, checkResult.errors); } break; }
+                        case 15: { if (input[i] == ':') state = 16; else { AddError(i, checkResult.errors); } break; }
+                        case 16:
+                            {
+                                if (input[i] == ' ')
+                                    state = 16;
+                                else if (IsLetter(input[i]))
+                                {
+                                    checkResult.constantName += input[i];
+                                    state = 17;
+                                }
+                                else
+                                    AddError(i, checkResult.errors);
+                                break;
+                            }
+                        case 17: 
+                            {
+                                if (Isw(input[i]))
+                                {
+                                    checkResult.constantName += input[i];
+                                    state = 17;
+                                }
+                                else if (input[i] == ' ')
+                                    state = 18;
+                                else if (input[i] == '=')
+                                    state = 19;
+                                else
+                                    AddError(i, checkResult.errors);
+                                break; 
+                            }
+                        case 18: { if (input[i] == ' ') state = 18; else if (input[i] == '=') state = 19; else { AddError(i, checkResult.errors); } break; }
+                        case 19:
+                            {
+                                if (input[i] == ' ')
+                                    state = 19;
+                                else if (input[i] == '-' || input[i] == '+')
+                                {
+                                    if (input[i] == '-')
+                                        checkResult.constantValue += input[i];
+                                    state = 20;
+                                }
+                                else if (input[i] == 'e')
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 23;
+                                }
+                                else if (IsDigit(input[i]))
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 21;
+                                }
+                                else
+                                    AddError(i, checkResult.errors);
+                                break;
+                            }
+                        case 20:
+                            {
+                                if (input[i] == ' ')
+                                    state = 19;
+                                else if (IsDigit(input[i]))
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 21;
+                                }
+                                else if (input[i] == 'e')
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 23;
+                                }
+                                else
+                                    AddError(i, checkResult.errors);
+                                break;
+                            }
+                        case 21:
+                            {
+                                if (IsDigit(input[i]))
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 21;
+                                }
+                                else if (input[i] == 'e')
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 23;
+                                }
+                                else if (input[i] == '.')
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 22;
+                                }
+                                else
+                                    AddError(i, checkResult.errors);
+                                break;
+                            }
+                        case 22:
+                            {
+                                if (IsDigit(input[i]))
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 22;
+                                }
+                                else if (input[i] == 'e')
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 23;
+                                }
+                                else
+                                    AddError(i, checkResult.errors);
+                                break;
+                            }
+                        case 23:
+                            {
+                                if (IsDigit(input[i]))
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 25;
+                                }
+                                else if (input[i] == '-' || input[i] == '+')
+                                {
+                                    if (input[i] == '-')
+                                        checkResult.constantValue += input[i];
+                                    state = 24;
+                                }
+                                else
+                                    AddError(i, checkResult.errors);
+                                break;
+                            }
+                        case 24:
+                            {
+                                if (IsDigit(input[i]))
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 25;
+                                }
+                                else
+                                    AddError(i, checkResult.errors);
+                                break;
+                            }
+                        case 25:
+                            {
+                                if (IsDigit(input[i]))
+                                {
+                                    checkResult.constantValue += input[i];
+                                    state = 25;
+                                }
+                                else
+                                    AddError(i, checkResult.errors);
+                                break;
+                            }
+                    }
+                }
+                checkResult.correct = state == 21 || state == 22 || state == 25;
+                return checkResult;
+            }
+        }
+    }
+    Form1.cs
+                List<string> strings = new List<string>();
+                List<FortranConstantsFinder.CheckResult> results = new List<FortranConstantsFinder.CheckResult>();
+                List<FortranConstantsFinder.ErrorInText> allErors = new List<FortranConstantsFinder.ErrorInText>();
+    
+                strings = new List<string>(CodeField.Text.Split('\n'));
+    
+                foreach (var str in strings)
+                {
+                    results.Add(FortranConstantsFinder.CheckString(str.Replace('\n', ' ')));
+                }
+    
+                int i = 0, sumStringsLength = 0;
+                ResultField.Text = "";
+                foreach (var handleResult in results)
+                {
+                    ResultField.Text += i + "-ая строка:\n";
+                    if (handleResult.correct)
+                    {
+                        ResultField.Text += "Является инициализацией константы\n";
+                        ResultField.Text += handleResult.constantName + " = " + handleResult.constantValue + "\n";
+                    }
+                    else
+                        ResultField.Text += "Не является инициализацией константы\n";
+    
+                    if (handleResult.errors.Count != 0)
+                        ResultField.Text += "Ошибки:\n";
+                    foreach (var error in handleResult.errors)
+                    {
+                        ResultField.Text += error.position + ":" + error.length + "\n";
+                    }
+                    ResultField.Text += "Число ошибок: " + handleResult.errors.Count + "\n";
+    
+                    foreach (var error in handleResult.errors)
+                    {
+                        FortranConstantsFinder.ErrorInText newError = error;
+                        newError.position += sumStringsLength;
+                        allErors.Add(newError);
+                    }
+    
+                    sumStringsLength += strings[i].Length + 1;
+                    i++;
+                }
+    
+                int pos = CodeField.SelectionStart, len = CodeField.SelectionLength;
+                CodeField.Select(0, CodeField.TextLength);
+                CodeField.SelectionColor = Color.Black;
+                foreach (var error in allErors)
+                {
+                    CodeField.Select(error.position, error.length);
+                    CodeField.SelectionColor = Color.Red;
+                }
+                CodeField.Select(pos, len);</pre>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Разработка грамматики</title>
+</head>
+<body>
+	<h1>Разработка грамматики</h1><br>
+    <p>Определим грамматику десятичных констант языка Pascal G[‹Param›] в нотации Хомского с продукциями P:</p>
+    <p>1.	‹Param› → real, parameter :: ‹AssignmentOperator›</p>
+    <p>2.	‹AssignmentOperator› → ‹Ident› = ‹Num›</p>
+    <p>3.	‹Ident› → ‹Letter›‹IdentRem›</p>
+    <p>4.	‹IdentRem› → ‹Letter›‹IdentRem› | ‹Digit›‹IdentRem› | ε</p>
+    <p>5.	‹Num› → [+|-]‹Digit›‹NumRem› | ‹NumE›</p>
+    <p>6.	‹NumRem› → ‹Digit›‹NumRem› | ‹NumE› | .‹NumRemPoint›</p>
+    <p>7.	‹NumRemPoint› → ‹Digit›‹NumRemPoint› | ‹NumE› | ε</p>
+    <p>8.	‹NumE› → [+|-]e‹NumWoE›</p>
+    <p>9.	‹NumWoE› → [+|-]‹Digit›‹NumRemWoE›</p>
+    <p>10.	‹NumRemWoE› → ‹Digit›‹NumRem› | ε</p>
+    <p>11.	‹Digit› → “0” | “1” | “2” | “3” | “4” | “5” | “6” | “7” | “8” | “9”</p>
+    <p>12.	‹Letter› → “a” | “b” | “c” | ... | “z” | “A” | “B” | “C” | ... | “Z”</p>
+    <p>Следуя введенному формальному определению грамматики, представим G[‹Param›] ее составляющими:</p>
+    <p>•	Z = ‹Param›;</p>
+    <p>•	VT = {a, b, c, ..., z, A, B, C, ..., Z, _, =, +, -, ., 0, 1, 2, ..., 9};
+    <p>•	VN = {‹Param›, ‹AssignmentOperator›, ‹Ident›, ‹IdentRem›, ‹Num›, ‹NumRem›, ‹NumE›, ‹NumWoE›, ‹NumRemPoint›, ‹NumRemWoE›, ‹Digit›, ‹Letter›}.</p>
+    </body>
+</html>
