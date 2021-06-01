@@ -5,30 +5,6 @@ The last laboratory work.
 <html>
 <head>
 	<title> Лабораторная работа 6 "Изучение и использование метода рекурсивного спуска для синтаксического анализа"</title>
-<style>
-        body {
-            width: auto;
-            height: auto;
-            background-color: #cfb9b9;
-            color: #000000;
-            border: 2px solid #000000;
-            margin: 1%;
-        }
-        h1 {
-            text-align: center;
-            letter-spacing: 5px;
-        }
-        h3, p {
-            letter-spacing: 1px;
-        }
-	
-	footer {
-	box-sizing: border-box;
-   	padding: 5px;
-    	border-top: 3px solid black;
-	}
-
-    </style>
 </head>
 
 </head>
@@ -41,7 +17,6 @@ The last laboratory work.
 		<li> <a href="#language"><b>Язык</b></a></li>
 		<li> <a href="#classification"><b>Классификация</b></a></li>
 		<li> <a href="#method"><b>Метод анализа - рекурсивный спуск</b></a></li>
-		<li> <a href="#test"><b>Тестовые примеры</b></a></li>
 	</ol><hr>
 	<h3 id="tt">Техническое задание.</h3>
 	<p>Цель работы: Изучить и использовать метод рекурсивного спуска для синтаксического анализа.</p>
@@ -74,18 +49,7 @@ The last laboratory work.
 	<h3 id="method">Метод анализа - рекурсивный спуск.</h3>
 	<p>Для грамматики G[E] был выбран метод рекурсивного спуска, потому что он подходит для контекстно-свободных грамматик.</p>
 	<p>Метод рекурсивного спуска заключается в том, что для каждого нетерминала грамматики создается своя функция с именем этого нетерминала. Задача функции – начиная с указанного места исходной цепочки найти подцепочку, которая выводится из этого нетерминала. Тело каждой такой функции пишется по правилам вывода соответствующего нетерминала: терминалы из правой части распознаются самой функцией, а нетерминалы соответствуют вызовам функций. Функции могут вызывать сами себя.</p><hr>
-	<h3 id="test">Тестовые примеры.</h3>
-	<p>Тестирование разработанного сканера пресдтавлено на рисунках 1-5</p>
-	<br><img src="images\example1.jpg" width="516px" height="240px" style=" margin-left: 33%; margin-right:33%">
-	<figcaption style=" text-align: center">Рисунок 1 - Тестовый пример 1</figcaption><br>
-	<br><img src="images\example2.jpg" width="516px" height="240px" style=" margin-left: 33%; margin-right:33%">
-	<figcaption style=" text-align: center">Рисунок 2 - Тестовый пример 2</figcaption><br>
-	<br><img src="images\example3.jpg" width="516px" height="240px" style=" margin-left: 33%; margin-right:33%">
-	<figcaption style=" text-align: center">Рисунок 3 - Тестовый пример 3</figcaption><br>
-	<br><img src="images\example4.jpg" width="516px" height="240px" style=" margin-left: 33%; margin-right:33%">
-	<figcaption style=" text-align: center">Рисунок 4 - Тестовый пример 4</figcaption><br>
-	<br><img src="images\example5.jpg" width="516px" height="240px" style=" margin-left: 33%; margin-right:33%">
-	<figcaption style=" text-align: center">Рисунок 5 - Тестовый пример 5</figcaption><br>
+	
 
 	<footer><small>Лабораторная работа 6 выполнена бригадой №1 группы АВТ-812 (Антонянц Е., Амельченко А., Гостеева А.). Интерфейс разработан бригадой №1 группы АВТ-812 (Антонянц Е., Амельченко А., Гостеева А.)</small></footer>
 </body>
